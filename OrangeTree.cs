@@ -49,6 +49,7 @@ namespace OrangeTreeSim
         public void OneYearPasses()
         {
             age+=1;
+            height = age * 2;
             if (age < 80)
             {
                 numOranges = 0;
@@ -68,11 +69,20 @@ namespace OrangeTreeSim
                 Console.WriteLine("The tree is sadly dead.. may it become firewood instead");
             }
         }
-        /*
+        
         public void EatOrange(int count)
         {
-
+            if (count <= numOranges)
+            {
+                numOranges -= count;
+                orangesEaten = count;
+                Console.WriteLine($"Oranges Consumed: {orangesEaten} There are: {numOranges} left");
+            }
+            else
+            {
+                Console.WriteLine("You want more oranges than there is avaiable. . .");
+            }
         }
-        */
+        
     }
 }
