@@ -45,13 +45,14 @@ namespace OrangeTreeSim
         public void OneYearPasses()
         {
             age++;
-            if (age <= 80)
+            if (age < 80)
             {
+                orangesEaten = 0;
                 numOranges = 0;
                 height += 2;
                 treeAlive = true;
                 while (age < 1) ;
-                for (int i = 0; i < 80; i++)
+                for (int i = 0; i <= 80; i++)
                 {
                      numOranges = (age - 1) * 5;
                 }
@@ -61,15 +62,15 @@ namespace OrangeTreeSim
             {
                 numOranges = 0;
                 treeAlive = false;
-                //Console.WriteLine("The tree is sadly dead.. may it become firewood instead");
+                Console.WriteLine("The tree is sadly dead.. may it become firewood instead");
             }
         }
         // Parameter count is the number of oranges you would like to eat - IF there are that many. 
         // The numOranges is redues by count and console prints out oranges eaten and how many are left
         public void EatOrange(int count)
         {
-            orangesEaten = count;
-            numOranges -= orangesEaten;
+            orangesEaten += count;
+            numOranges -= count;
         }
     }
 }
