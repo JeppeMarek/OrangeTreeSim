@@ -51,18 +51,14 @@ namespace OrangeTreeSim
                 numOranges = 0;
                 height += 2;
                 treeAlive = true;
-                while (age < 1) ;
-                for (int i = 0; i <= 80; i++)
-                {
-                     numOranges = (age - 1) * 5;
-                }
+                numOranges = (age - 1) * 5;
                
-                Console.WriteLine($"The tree is now {age} years old, it grew to {height} meters tall\nThe tree currently has: {numOranges} oranges on it");
-            }else if (age >= 80)
+               // Console.WriteLine($"The tree is now {age} years old, it grew to {height} meters tall\nThe tree currently has: {numOranges} oranges on it");
+            } else 
             {
                 numOranges = 0;
                 treeAlive = false;
-                Console.WriteLine("The tree is sadly dead.. may it become firewood instead");
+                // Console.WriteLine("The tree is sadly dead.. may it become firewood instead");
             }
         }
         // Parameter count is the number of oranges you would like to eat - IF there are that many. 
