@@ -6,46 +6,42 @@ using System.Threading.Tasks;
 
 namespace OrangeTreeSim
 {
+
     public class OrangeTree
     {
+        // Fields
         private int age;
         private int height;
         private bool treeAlive;
         private int numOranges;
         private int orangesEaten;
-
-        public void SetAge (int age)
+        // Getters and setters - properties
+        public int Age
         {
-            this.age = age;
+            get {  return age; }
+            set { age = value; }
         }
-        public int GetAge()
-        {
-            return this.age;
-        }
-        public void SetHeight(int height)
-        {
-            this.height = height;
-        }
-        public int GetHeight() 
+        public int Height
         { 
-            return this.height;
+            get { return height; } 
+            set { height = value; } 
         }
-        public void SetTreeAlive(bool treeAlive)
+        public bool TreeAlive
         {
-            this.treeAlive = treeAlive;
+            get { return treeAlive; }
+            set { treeAlive = value; }
         }
-        public bool GetTreeAlive()
+        public int NumOranges
         {
-            return this.treeAlive;
+            get { return numOranges; }
         }
-        public int getNumOranges()
+        public int GetOrangesEaten
         {
-            return numOranges;
-        } 
-        public int GetOrangesEaten()
-        {
-            return orangesEaten;
+            get { return orangesEaten; }
         }
+        // Methods
+        // 1 gets added to age, height goes up by 2 for each year passed. numOranges is 5 times the age. In the first year no oranges grow
+        // All of this happens if the treeAlive is true and the tree is under 80 years old
         public void OneYearPasses()
         {
             age+=1;
@@ -65,7 +61,8 @@ namespace OrangeTreeSim
                 Console.WriteLine("The tree is sadly dead.. may it become firewood instead");
             }
         }
-        
+        // Parameter count is the number of oranges you would like to eat - IF there are that many. 
+        // The numOranges is redues by count and console prints out oranges eaten and how many are left
         public void EatOrange(int count)
         {
             if (count <= numOranges)
@@ -78,7 +75,6 @@ namespace OrangeTreeSim
             {
                 Console.WriteLine("You want more oranges than there is avaiable. . .");
             }
-        }
-        
+        }   
     }
 }

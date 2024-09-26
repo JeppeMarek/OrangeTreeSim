@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-         OrangeTree myTree = new OrangeTree();
-            myTree.SetAge(3);
-            Console.WriteLine(myTree.GetAge());
+            OrangeTree myTree = new OrangeTree();
+            myTree.Age = 3;
+            Console.WriteLine("The tree is : {0} years old",myTree.Age);
             myTree.OneYearPasses();
             Console.WriteLine("One year has passed");
             myTree.OneYearPasses();
