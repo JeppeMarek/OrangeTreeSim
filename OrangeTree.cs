@@ -54,12 +54,8 @@ namespace OrangeTreeSim
             {
                 numOranges = 0;
                 height += 2;
-                treeAlive = true;/*
-                while (age < 1)
-                {
-                    numOranges = age * 5;
-                }
-                */
+                treeAlive = true;
+                while (age < 1) ;
                 numOranges = (age - 1) * 5;
                 Console.WriteLine($"The tree is {age} years old, it grew to {height} meters tall\nThe tree currently has: {numOranges} oranges on it");
             }
